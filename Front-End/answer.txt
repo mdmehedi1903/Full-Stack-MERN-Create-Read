@@ -1,0 +1,101 @@
+1.
+============================
+
+import React from 'react';
+
+const Persion = (props) => {
+    return (
+        <div>
+            
+          <p>{ props.name}</p>
+            
+
+        </div>
+    );
+};
+
+export default Persion;
+
+
+
+2.
+===============================
+import React from 'react';
+
+const Ternary = () => {
+    const isGreeting = true; 
+    // const isGreeting = false; 
+    return (
+        <div>
+            {
+                isGreeting?(<h1>Hello, World!</h1>):<h1>Goodbye</h1>
+            }
+
+            {/* age>18?(<h1>You are Adult!</h1>):(<h1>You are Child!</h1>) */}
+
+        </div>
+    );
+};
+
+export default Ternary;
+
+
+
+
+3.
+===============================
+import React from 'react';
+
+const Temperature = () => {
+const temp = 20;
+if(temp>=30){
+    return (
+        <>
+            <h1>It's hot!</h1>
+        </>
+    )
+}else if(temp<=20){
+    return (
+        <>
+            <h1>It's cool</h1>
+        </>
+    );
+}
+else {
+    return(
+        <>
+             <h1>It's neither hot nor cool.</h1>
+        </>
+    )
+}
+};
+
+export default Temperature;
+
+
+4.
+==============================
+Alternative: 1
+
+import React from 'react';
+
+const DayOfWeek = (dayOfWeek) => {
+  let message;
+
+  switch (dayOfWeek) {
+    case 'Monday':
+      message = "It's Monday!";
+      break;
+    case 'Friday':
+      message = "It's Friday!";
+      break;
+    default:
+      message = "It's a weekday";
+  }
+
+  return (
+    <div>
+      <p>{message}</p>
+    </div>
+  );
+}
